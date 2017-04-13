@@ -24,7 +24,7 @@
 
 PRGNAM=decklink-sdk
 SRCNAM=Blackmagic_DeckLink_SDK
-VERSION=${VERSION:-10.1.4}
+VERSION=${VERSION:-10.8.5}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SBo}
 
@@ -120,7 +120,7 @@ done
 for m in `find . -name "*.pro"`; do
   echo "Editing $m ..."
   sed -i 's/\.\.\/\.\.\/include/\/usr\/include\/decklink/g' $m
-  (cd $(dirname $m) && qmake )
+  if [ "$(dirname $m)" != "./H265TestEncoder" ]; then (cd $(dirname $m) && qmake ); fi
 done; )
 
 
