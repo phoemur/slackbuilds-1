@@ -51,7 +51,7 @@
 # 4.1   01-APR-2017	no foolin': various bug and CVE updates re: ponce https://lists.nongnu.org/archive/html/qemu-devel/2017-03/msg06332.html
 
 PRGNAM=qemu
-VERSION=${VERSION:-2.8.1}
+VERSION=${VERSION:-2.9.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SBo}
 
