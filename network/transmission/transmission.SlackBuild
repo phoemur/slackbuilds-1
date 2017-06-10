@@ -103,6 +103,7 @@ sed -i -e 's%-g -O3 -funroll-loops %%g' configure.ac
 sed -i -e 's%-ggdb3 %%g' configure.ac
 
 # Thanks Larry Hajali
+rm -f m4/glib-gettext.m4
 autoreconf -ivf
 
 CC=gcc CXX=g++ \
