@@ -52,7 +52,7 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
  -exec chmod 644 {} \;
 
-sed -i 's,share/man,man,g' Makefile
+sed -i -e 's,share/man,man,g' -e 's, -Werror,,' Makefile
 make PREFIX=/usr CFLAGS="$SLKCFLAGS"
 strip $PRGNAM
 make install PREFIX=/usr DESTDIR=$PKG
