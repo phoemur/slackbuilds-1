@@ -23,7 +23,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=perf
-VERSION=${VERSION:-4.4.38}
+VERSION=${VERSION:-4.9.31}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SBo}
 
@@ -68,7 +68,7 @@ make \
   O=$BUILDDIR \
   DESTDIR=$PKG/ \
   prefix=/usr \
-  EXTRA_CFLAGS="$SLKCFLAGS" \
+  EXTRA_CFLAGS="$SLKCFLAGS -Wno-error=implicit-fallthrough= -Wno-error=format-truncation=" \
   install
 
 # Tidy up the source tree :-(
